@@ -3,13 +3,7 @@ import os
 from db import db, connect_db
 import models
 
-app=Flask(
-    __name__,
-    template_folder="../frontend/pages",
-    static_folder="../frontend",
-    static_url_path="/static"
-
-    )
+app=Flask(__name__)
 
 
 app.config["SQLALCHEMY_DATABASE_URI"]=connect_db()
